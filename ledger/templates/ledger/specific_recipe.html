@@ -4,11 +4,12 @@
     <p>name: {{ recipe.name }}</p>
 
     <p>ingredients:</p>
-    <ul>
         {% for item in recipe.ingredients %}
-            <li>name: {{ item.name }}, quantity: {{ item.quantity }}</li>
+            <ul><li>
+                name: {{ item.name }}, <br>
+                quantity: {{ item.quantity }}
+            </ul></li>
         {% endfor %}
-    </ul>
 
     <p>link: <a href="{{ recipe.link }}">{{ recipe.link }}</a></p>
 {% endblock %}
