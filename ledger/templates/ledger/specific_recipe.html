@@ -1,15 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <p>name: {{ recipe.name }}</p>
+    <p>
+        name: {{ recipe.name }} <br>
+        ingredients:
+    </p>
+        <ul>   
+            {% for item in recipe.ingredients %}
+                <li>
+                    name: {{ item.name }}, <br>
+                    quantity: {{ item.quantity }}
+                </li>
+                <br>
+            {% endfor %}
+        </ul>   
 
-    <p>ingredients:</p>
-        {% for item in recipe.ingredients %}
-            <ul><li>
-                name: {{ item.name }}, <br>
-                quantity: {{ item.quantity }}
-            </ul></li>
-        {% endfor %}
-
-    <p>link: <a href="{{ recipe.link }}">{{ recipe.link }}</a></p>
+    <p>
+        link: <a href="{{ recipe.link }}">{{ recipe.link }}</a>
+    </p>
 {% endblock %}

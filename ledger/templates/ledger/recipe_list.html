@@ -4,17 +4,7 @@
     <p>recipes:</p>
     {% for recipe in recipes %}
     <div style="padding-left: 20px;">
-        name: {{ recipe.name }}<br>
-        ingredients:
-            {% for item in recipe.ingredients %}
-                <ul><li>
-                    name: {{ item.name }},<br>
-                    quantity: {{ item.quantity }}
-                <br> </li></ul>
-            {% endfor %}
-        
-
-        <p>link: <a href="{{ recipe.link }}">{{ recipe.link }}</a></p>
-        </div><hr> 
+        name: <a href="{{ recipe.link }}">{{ recipe.name}}</a><br>
+        </div>
         {% endfor %}
 {% endblock %}
