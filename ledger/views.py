@@ -29,3 +29,11 @@ Recipe_list = [
 def recipe_list(request):
     ctx = {"recipes": Recipe_list}
     return render (request, "ledger/recipe_list.html",ctx)
+
+def recipe_1(request):
+    ctx = {"recipe": Recipe_list[0]}
+    return render (request,"ledger/recipe", ctx)
+
+def recipe_2(request):
+    ctx = {"recipe": Recipe_list[1]}
+    return render (request,"ledger/recipe", ctx)
