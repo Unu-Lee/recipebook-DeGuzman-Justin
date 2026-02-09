@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-Recipe_list = [
+RECIPE_DATA = [
         {   
             "name" : "Recipe 1", 
             "ingredients": [
@@ -28,14 +28,15 @@ Recipe_list = [
         }
 ]
 
+
 def recipe_list(request):
-    ctx = {"recipes": Recipe_list}
+    ctx = {"recipes": RECIPE_DATA}
     return render (request, "ledger/recipe_list.html",ctx)
 
 def recipe_1(request):
-    ctx = {"recipe": Recipe_list[0]}
+    ctx = {"recipe": RECIPE_DATA[0]}
     return render (request,"ledger/specific_recipe.html", ctx)
 
 def recipe_2(request):
-    ctx = {"recipe": Recipe_list[1]}
+    ctx = {"recipe": RECIPE_DATA[1]}
     return render (request,"ledger/specific_recipe.html", ctx)
