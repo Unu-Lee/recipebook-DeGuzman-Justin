@@ -1,13 +1,19 @@
-{% extends 'base.html'%}
-{% block title %}All Recipes{% endblock %}
+{% extends "base.html" %}
 
 {% block content %}
-    <h2>Recipe List</h2>
-    <ul>
-        {% for recipe in recipes %}
-            <li>
-                <a href="/recipe/{{ forloop.counter }}">{{ recipe.name }}</a>
-            </li>
-        {% endfor %}
-    </ul>
+    <h1>recipes:</h1>
+
+    {% for recipe in recipes %}
+            <h2>{{ recipe.name }}</h2>
+            
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+                {% for item in recipe.ingredients %}
+                    <li>{{ item.name }}: {{ item.quantity }}</li>
+                {% endfor %}
+            </ul>
+
+            <p><a href="{{ recipe.link }}">Go to {{ recipe.name }}</a></p>
+        <hr>
+    {% endfor %}
 {% endblock %}
