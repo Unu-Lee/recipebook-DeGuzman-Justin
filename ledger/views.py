@@ -9,8 +9,7 @@ Recipe_list = [
                 {"name": "pork", "quantity": "1kg"},
                 {"name": "water", "quantity": "1L"},
                 {"name": "sinigang mix", "quantity": "1 packet"}
-            ],
-            "link": "/recipe/1"
+            ]
         },
         {
             "name" : "Recipe 2",
@@ -22,8 +21,7 @@ Recipe_list = [
                 {"name" : "salt", "quantity": "1 tablespoon"},
                 {"name" : "whole black peppers", "quantity": "1 tablespoon"},
                 {"name" : "pork", "quantity": "1 kilo"}
-            ],
-            "link" : "/recipe/2"
+            ]
 
         }
 ]
