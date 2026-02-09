@@ -32,8 +32,8 @@ def recipe_list(request):
 
 def recipe_1(request):
     ctx = {"recipe": Recipe_list[0]}
-    return render (request,"ledger/recipe", ctx)
+    return render (request,"ledger/specific_recipe.html", ctx)
 
 def recipe_2(request):
     ctx = {"recipe": Recipe_list[1]}
-    return render (request,"ledger/recipe", ctx)
+    return render (request,"ledger/specific_recipe.html", ctx)
