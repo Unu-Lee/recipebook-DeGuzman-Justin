@@ -6,9 +6,9 @@
         ingredients:
     </p>
         <ul>   
-            {% for item in recipe.ingredients %}
+            {% for item in recipe.ingredients.all %}
                 <li>
-                    name: {{ item.name }}, <br>
+                    name: {{ item.ingredient.name }}, <br>
                     quantity: {{ item.quantity }}
                 </li>
                 <br>
@@ -16,6 +16,6 @@
         </ul>   
 
     <p>
-        link: <a href="{{ recipe.link }}">{{ recipe.link }}</a>
+        link: <a href="{{ recipe.get_absolute_url }}">{{ recipe.link }}</a>
     </p>
 {% endblock %}

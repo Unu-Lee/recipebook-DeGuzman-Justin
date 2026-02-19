@@ -17,7 +17,7 @@ class Recipe(models.Model):
         return self.name
     
     def get_absolute_url(self):
-        return reverse('recipe_detail', args = [str(self.nam)])
+        return reverse('specific_recipe', args = [str(self.nam)])
     
 class RecipeIngredient(models.Model):
     quantity = models.CharField(max_length=50)

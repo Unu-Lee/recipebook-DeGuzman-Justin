@@ -4,7 +4,7 @@
     <p>recipes:</p>
     {% for recipe in recipes %}
     <div style="padding-left: 20px;">
-        name: <a href="{{ recipe.link }}">{{ recipe.name}}</a><br>
+        name: <a href="{{ recipe.get_absolute_url }}">{{ recipe.name}}</a><br>
         </div>
         {% endfor %}
 {% endblock %}
