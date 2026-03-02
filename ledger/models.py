@@ -10,7 +10,7 @@ class Ingredient(models.Model):
         return self.name
     
     def get_absolute_url(self):
-        return reverse('home')
+        return reverse('recipe_list')
 
 class Recipe(models.Model):
     name = models.CharField(max_length=50)
