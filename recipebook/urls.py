@@ -22,4 +22,5 @@ urlpatterns = [
     path("",RedirectView.as_view(pattern_name="recipe_list", permanent=False),),
     path('admin/', admin.site.urls),
     path('', include('ledger.urls')),
+    path("accounts/", include("django.contrib.auth.urls"))
 ]
