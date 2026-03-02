@@ -9,7 +9,7 @@ def recipe_list(request):
     return render(request, "ledger/recipe_list.html", ctx)
 
 
-@login_required(login_url="accounts/login")
+@login_required
 def specific_recipe(request, pk):
     recipe = Recipe.objects.get(pk=pk)
     ctx = {"recipe": recipe}
