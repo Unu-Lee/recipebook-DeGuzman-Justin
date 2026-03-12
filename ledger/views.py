@@ -28,6 +28,6 @@ def recipe_add(request):
             recipe = form.save()
             return redirect('specific_recipe', pk=recipe.pk)
     
-    return render(request,"ledger/specific_form.html", {"form": form})
+    return render(request,"ledger/recipe_form.html", {"form": form})
     
 
