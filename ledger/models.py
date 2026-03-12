@@ -50,6 +50,7 @@ class RecipeIngredient(models.Model):
         Recipe, on_delete=models.CASCADE, related_name="ingredients"
     )
 
+
 class RecipeImage(models.Model):
 
     image = models.ImageField(upload_to='images/')
@@ -61,5 +62,5 @@ class RecipeImage(models.Model):
         related_name='images'
     )
 
-    def __str__ (self):
+    def __str__(self):
         return self.description

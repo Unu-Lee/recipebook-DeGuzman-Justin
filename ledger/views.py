@@ -16,9 +16,10 @@ def specific_recipe(request, pk):
     ctx = {"recipe": recipe}
     return render(request, "ledger/specific_recipe.html", ctx)
 
+
 @login_required
 def recipe_add(request):
-    
+
     form = RecipeForm()
 
     if request.method == "POST":
@@ -27,15 +28,15 @@ def recipe_add(request):
         if form.is_valid():
             recipe = form.save()
             return redirect('specific_recipe', pk=recipe.pk)
-    
-    return render(request,"ledger/recipe_form.html", {"form": form})
+
+    return render(request, "ledger/recipe_form.html", {"form": form})
 
 
 @login_required
 def add_image(request, pk):
 
     recipe = Recipe.objects.get(pk=pk)
-    
+
     form = RecipeImageForm()
 
     if request.method == "POST":
@@ -49,9 +50,7 @@ def add_image(request, pk):
             image.save()
 
             return redirect('specific_recipe', pk=pk)
-        
-    ctx = {"form":form, "recipe":recipe}
 
-    return render(request,"ledger/add_image.html",ctx)
-    
+    ctx = {"form": form, "recipe": recipe}
 
+    return render(request, "ledger/add_image.html", ctx)
