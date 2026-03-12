@@ -3,12 +3,12 @@ from .models import Recipe, RecipeImage
 
 class RecipeForm(forms.ModelForm):
 
-    class META:
+    class Meta:
         model = Recipe
         fields = '__all__'
 
 class RecipeImageForm(forms.ModelForm):
 
-    class META:
+    class Meta:
         model = RecipeImage
         fields = ["image", "description"]
